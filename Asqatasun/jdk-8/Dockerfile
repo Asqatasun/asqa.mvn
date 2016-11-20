@@ -28,8 +28,11 @@ MAINTAINER Fabrice Gangler <fabrice@asqatasun.org>
 #   overwriting with --build-arg GIT_BRANCH=<branch_name>
 #
 # #### FROM  ######################################################
-#   maven:3-jdk-8           https://github.com/carlossg/docker-maven/blob/master/jdk-8/Dockerfile
-#    |--- openjdk:8-jdk     https://github.com/docker-library/openjdk/blob/master/8-jdk/Dockerfile
+#   maven:3-jdk-8                       https://github.com/carlossg/docker-maven/blob/master/jdk-8/Dockerfile
+#   |-- openjdk:8-jdk                   https://github.com/docker-library/openjdk/blob/master/8-jdk/Dockerfile
+#     |-- buildpack-deps:jessie-scm     https://github.com/docker-library/buildpack-deps/blob/master/jessie/scm/Dockerfile
+#       |-- buildpack-deps:jessie-curl  https://github.com/docker-library/buildpack-deps/blob/master/jessie/curl/Dockerfile
+#         |-- debian:jessie             https://github.com/tianon/docker-brew-debian/blob/master/jessie/Dockerfile
 ###################################################################
 
 # build variables
@@ -62,9 +65,6 @@ RUN cd     /tmp/                                                    && \
 
 # environment variables
 ENV SRC_PRELOAD=${SRC_URL}
-
-
-
 
 
 
