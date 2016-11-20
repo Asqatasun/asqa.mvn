@@ -9,7 +9,7 @@ MAINTAINER Fabrice Gangler <fabrice@asqatasun.org>
 # 
 #   --- BUILDING
 #   docker build -t asqa.mvn:jdk8.alpine  . 
-#   docker build -t asqa.mvn:jdk8.alpine  --build-arg GIT_BRANCH=develop  .  
+#   docker build -t asqa.mvn:jdk8.alpine  --build-arg GIT_BRANCH=develop  .
 #
 #   --- TESTING
 #   docker run  -it --rm  asqa.mvn:jdk8.alpine  /bin/bash

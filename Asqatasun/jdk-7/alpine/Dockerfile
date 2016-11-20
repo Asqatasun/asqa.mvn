@@ -9,7 +9,7 @@ MAINTAINER Fabrice Gangler <fabrice@asqatasun.org>
 # 
 #   --- BUILDING
 #   docker build -t asqa.mvn:jdk7.alpine  . 
-#   docker build -t asqa.mvn:jdk7.alpine  --build-arg GIT_BRANCH=develop  .  
+#   docker build -t asqa.mvn:jdk7.alpine  --build-arg GIT_BRANCH=develop  .
 #
 #   --- TESTING
 #   docker run  -it --rm  asqa.mvn:jdk7.alpine  /bin/bash
@@ -39,7 +39,7 @@ ARG SRC_URL="${SRC_URL_PREFIX}/${GIT_BRANCH}.zip"
 
 # build
 RUN cd      /tmp/                                                   && \
-    apk     add --no-cache openssl                                  && \            
+    apk     add --no-cache openssl                                  && \
     wget    ${SRC_URL}                                              && \
     unzip   ${GIT_BRANCH}.zip                                       && \
     cd      Asqatasun-${GIT_BRANCH}                                 && \

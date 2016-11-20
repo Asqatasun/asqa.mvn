@@ -8,19 +8,19 @@ MAINTAINER Fabrice Gangler <fabrice@asqatasun.org>
 # #### usage ######################################################
 # 
 #   --- BUILDING
-#   docker build -t asqa_mvn-jdk7  .
-#   docker build -t asqa_mvn-jdk7  --build-arg GIT_BRANCH=develop  .  
+#   docker build -t asqa.mvn:jdk7  .
+#   docker build -t asqa.mvn:jdk7  --build-arg GIT_BRANCH=develop  .
 #
 #   --- TESTING
-#   docker run  -it --rm  asqa_mvn-jdk7  /bin/bash
-#   docker run  -it --rm  asqa_mvn-jdk7  javac -version
-#   docker run  -it --rm  asqa_mvn-jdk7  java  -version
-#   docker run  -it --rm  asqa_mvn-jdk7  mvn   -version
-#   docker run  -it --rm  asqa_mvn-jdk7  dpkg  -l "openjdk*"
+#   docker run  -it --rm  asqa.mvn:jdk7  /bin/bash
+#   docker run  -it --rm  asqa.mvn:jdk7  javac -version
+#   docker run  -it --rm  asqa.mvn:jdk7  java  -version
+#   docker run  -it --rm  asqa.mvn:jdk7  mvn   -version
+#   docker run  -it --rm  asqa.mvn:jdk7  dpkg  -l "openjdk*"
 #
 #   --- COMPILING
-#   docker run  -it --rm  -v "$PWD":/usr/src/  -w /usr/src/  asqa_mvn-jdk7  mvn clean install
-#   docker run  -it --rm  -v "$PWD":/usr/src/  -w /usr/src/  asqa_mvn-jdk7  mvn clean 
+#   docker run  -it --rm  -v "$PWD":/usr/src/  -w /usr/src/  asqa.mvn:jdk7  mvn clean install
+#   docker run  -it --rm  -v "$PWD":/usr/src/  -w /usr/src/  asqa.mvn:jdk7  mvn clean 
 #
 #
 # #### source code  ###############################################
