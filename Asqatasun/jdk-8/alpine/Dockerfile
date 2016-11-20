@@ -39,7 +39,7 @@ ARG SRC_URL="${SRC_URL_PREFIX}/${GIT_BRANCH}.zip"
 
 # build
 RUN cd      /tmp/                                                   && \
-    apk     add --update openssl                                    && \            
+    apk     add --no-cache openssl                                  && \
     wget    ${SRC_URL}                                              && \
     unzip   ${GIT_BRANCH}.zip                                       && \
     cd      Asqatasun-${GIT_BRANCH}                                 && \
