@@ -33,18 +33,23 @@ MAINTAINER Fabrice Gangler <fabrice@asqatasun.org>
 ###################################################################
 
 # build variables
-ARG SRC_URL_PREFIX=https://github.com/Asqatasun/Asqatasun/archive
 ARG GIT_BRANCH=master
+ARG SRC_URL_PREFIX=https://github.com/Asqatasun/Asqatasun/archive
+ARG SRC_URL="${SRC_URL_PREFIX}/${GIT_BRANCH}.zip"
 
-ENV SRC_URL="${SRC_URL_PREFIX}/${GIT_BRANCH}.zip"
-RUN cd    /tmp/                                                     && \
-    wget  ${SRC_URL}                                                && \
-    unzip ${GIT_BRANCH}.zip                                         && \
-    cd    Asqatasun-${GIT_BRANCH}                                   && \
-    mvn   clean install                                             && \
-    mv    /root/.m2/repository  /usr/share/maven/ref/repository     && \
-    rm    -rf /tmp/*.zip /tmp/Asq*  /root/.m2/*                     && \
-        echo  "\n\n\n"                                              && \
+# build
+RUN cd     /tmp/                                                    && \
+    wget   ${SRC_URL}                                               && \
+    unzip  ${GIT_BRANCH}.zip                                        && \
+    cd     Asqatasun-${GIT_BRANCH}                                  && \
+    mvn    clean install                                            && \
+    cp -r  /root/.m2  /root/.m2_backup                              && \
+    rm -rf /tmp/*.zip /tmp/Asq*  /root/.m2/*                        && \
+    FIND='exec "$@"'                                                && \
+    ADD='mv -f \/root\/.m2_backup\/repository \/root\/.m2\/;'       && \
+    FILE=/usr/local/bin/mvn-entrypoint.sh                           && \
+    sed -i "s/${FIND}/${ADD}\n${FIND}/g" $FILE                      && \
+        echo  "--------------------------------------------------"  && \
         echo  "-----> backup maven plugins : OK"                    && \
         echo  "-----> clean : OK"                                   && \
         echo  "-----> configuration" && cd /root/                   && \
@@ -53,6 +58,10 @@ RUN cd    /tmp/                                                     && \
         javac -version      && echo "----------------------------"  && \
         java  -version      && echo "----------------------------"  && \
         echo  ${SRC_URL}    && echo "----------------------------"
-               
+ 
+
+# environment variables
+ENV SRC_PRELOAD=${SRC_URL}
+
 
 
