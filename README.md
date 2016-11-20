@@ -12,10 +12,10 @@ avec les plugins Maven nécessaire à la compilation.
 
 Supported tags and respective `Dockerfile` links :
 
-* jdk7.alpine ([Asqatasun/jdk-8/alpine/Dockerfile](https://github.com/dzc34/asqa.mvn/Asqatasun/jdk-8/alpine/Dockerfile))
-* jdk8.alpine ([Asqatasun/jdk-8/alpine/Dockerfile](https://github.com/dzc34/asqa.mvn/Asqatasun/jdk-8/alpine/Dockerfile))
-* jdk7, latest ([Asqatasun/jdk-7/Dockerfile](https://github.com/dzc34/asqa.mvn/Asqatasun/jdk-7/Dockerfile))
-* jdk8 ([Asqatasun/jdk-8/Dockerfile](https://github.com/dzc34/asqa.mvn/Asqatasun/jdk-8/Dockerfile))
+* jdk7.alpine ([Asqatasun/jdk-7/alpine/Dockerfile](https://github.com/dzc34/asqa.mvn/blob/master/Asqatasun/jdk-7/alpine/Dockerfile))
+* jdk8.alpine ([Asqatasun/jdk-8/alpine/Dockerfile](https://github.com/dzc34/asqa.mvn/blob/master/Asqatasun/jdk-8/alpine/Dockerfile))
+* jdk7, latest ([Asqatasun/jdk-7/Dockerfile](https://github.com/dzc34/asqa.mvn/blob/master/Asqatasun/jdk-7/Dockerfile))
+* jdk8 ([Asqatasun/jdk-8/Dockerfile](https://github.com/dzc34/asqa.mvn/blob/master/Asqatasun/jdk-8/Dockerfile))
 
 ## How to use this image
 
@@ -37,8 +37,7 @@ cd Asqatasun
 docker run -it --rm  -v "$PWD":/usr/src/  -w /usr/src/ dzc34/asqa.mvn:jdk7  mvn clean 
 ```
 
-
-##### Contrôler et manipuler l'image 
+#### Contrôler et manipuler l'image 
 ```shell
 docker run -it --rm  dzc34/asqa.mvn:jdk7  /bin/bash
 docker run -it --rm  dzc34/asqa.mvn:jdk7  javac -version
@@ -49,7 +48,6 @@ docker run -it --rm  dzc34/asqa.mvn:jdk7  mvn   -version
 ### Documentation
 
 
------------
 
 ## Contact and discussions
 
