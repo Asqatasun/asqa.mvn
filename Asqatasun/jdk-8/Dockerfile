@@ -7,27 +7,27 @@ MAINTAINER Fabrice Gangler <fabrice@asqatasun.org>
 #
 # #### usage ######################################################
 # 
-#   --- BUILDING
+#   --- Building this docker image
 #   docker build -t asqa.mvn:jdk8  .
 #   docker build -t asqa.mvn:jdk8  --build-arg GIT_BRANCH=develop  .
 #   docker build -t asqa.mvn:jdk8  --build-arg GIT_BRANCH=v4.0.3   .
 #
-#   --- TESTING
+#   --- Compiling Asqatasun with this docker image
+#   docker run  -it --rm  -v "$PWD":/usr/src/  -w /usr/src/  asqa.mvn:jdk8  mvn clean install
+#   docker run  -it --rm  -v "$PWD":/usr/src/  -w /usr/src/  asqa.mvn:jdk8  mvn clean 
+#
+#   --- Playing with this docker image
 #   docker run  -it --rm  asqa.mvn:jdk8  /bin/bash
 #   docker run  -it --rm  asqa.mvn:jdk8  javac -version
 #   docker run  -it --rm  asqa.mvn:jdk8  java  -version
 #   docker run  -it --rm  asqa.mvn:jdk8  mvn   -version
 #   docker run  -it --rm  asqa.mvn:jdk8  dpkg  -l "openjdk*"
 #
-#   --- COMPILING
-#   docker run  -it --rm  -v "$PWD":/usr/src/  -w /usr/src/  asqa.mvn:jdk8  mvn clean install
-#   docker run  -it --rm  -v "$PWD":/usr/src/  -w /usr/src/  asqa.mvn:jdk8  mvn clean 
-#
 #
 # #### source code  ###############################################
 #   https://github.com/Asqatasun/Asqatasun/archive/master.zip
-#   overwriting with --build-arg GIT_BRANCH=<branch_name>
-#   overwriting with --build-arg GIT_BRANCH=<tag_name>
+#     could be overridden with  --build-arg GIT_BRANCH=<branch_name>
+#     could be overridden with  --build-arg GIT_BRANCH=<tag_name>
 #
 # #### FROM  ######################################################
 #   maven:3-jdk-8                       https://github.com/carlossg/docker-maven/blob/master/jdk-8/Dockerfile
