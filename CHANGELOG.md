@@ -1,5 +1,13 @@
 
 --------------------------------
+Asqa.mvn 0.5.0, 2016-11-27
+--------------------------------
+- added Asqatasun-Jenkins-Plugin/jdk-7/Dockerfile
+- added Asqatasun-Jenkins-Plugin/jdk-8/Dockerfile
+- added Asqatasun-Jenkins-Plugin/jdk-7/alpine/Dockerfile
+- added Asqatasun-Jenkins-Plugin/jdk-8/alpine/Dockerfile
+
+--------------------------------
 Asqa.mvn 0.4.0, 2016-11-26
 --------------------------------
 - jdk-*/Dockerfile        : reduced weight from 443 MB to 361 MB
@@ -14,7 +22,7 @@ Asqa.mvn 0.3.1, 2016-11-20
 Asqa.mvn 0.3.0, 2016-11-20
 --------------------------------
 - added Asqatasun/jdk-7/alpine/Dockerfile
-- added Asqatasun/jdk-7/alpine/Dockerfile
+- added Asqatasun/jdk-8/alpine/Dockerfile
 
 --------------------------------
 Asqa.mvn 0.2.0, 2016-11-20

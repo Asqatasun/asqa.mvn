@@ -12,10 +12,18 @@ avec les plugins Maven nécessaire à la compilation.
 
 Supported tags and respective `Dockerfile` links :
 
+### Asqatasun
 * jdk7.alpine ([Asqatasun/jdk-7/alpine/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Asqatasun/jdk-7/alpine/Dockerfile))
 * jdk8.alpine ([Asqatasun/jdk-8/alpine/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Asqatasun/jdk-8/alpine/Dockerfile))
 * jdk7, latest ([Asqatasun/jdk-7/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Asqatasun/jdk-7/Dockerfile))
 * jdk8 ([Asqatasun/jdk-8/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Asqatasun/jdk-8/Dockerfile))
+
+### Asqatasun-Jenkins-Plugin
+* jenkins_jdk7.alpine ([Asqatasun-Jenkins-Plugin/jdk-7/alpine/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Asqatasun-Jenkins-Plugin/jdk-7/alpine/Dockerfile))
+* jenkins_jdk8.alpine ([Asqatasun-Jenkins-Plugin/jdk-8/alpine/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Asqatasun-Jenkins-Plugin/jdk-8/alpine/Dockerfile))
+* jenkins_jdk7 ([Asqatasun-Jenkins-Plugin/jdk-7/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Asqatasun-Jenkins-Plugin/jdk-7/Dockerfile))
+* jenkins_jdk8 ([Asqatasun-Jenkins-Plugin/jdk-8/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Asqatasun-Jenkins-Plugin/jdk-8/Dockerfile))
+
 
 ## How to use this image
 
