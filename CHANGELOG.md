@@ -1,5 +1,11 @@
 
 --------------------------------
+Asqa.mvn 0.5.1, 2016-11-27
+--------------------------------
+- reduced weight for Asqatasun-Jenkins-Plugin
+- normalised temporary directory name
+
+--------------------------------
 Asqa.mvn 0.5.0, 2016-11-27
 --------------------------------
 - added Asqatasun-Jenkins-Plugin/jdk-7/Dockerfile

@@ -45,11 +45,11 @@ ARG SRC_URL="${SRC_URL_PREFIX}/${GIT_BRANCH}.zip"
 
 # build
 RUN cd      /tmp/                                                   && \
-    wget    ${SRC_URL}       &&   unzip  *.zip                      && \
-    rm      *.zip            &&   mv     Asqa* Asqatasun            && \
-    cd      Asqatasun        &&   mvn    clean install              && \
-    cp -r   /root/.m2  /root/.m2_backup                             && \
-    rm -rf  /tmp/Asq*  /root/.m2/*                                  && \
+    wget    ${SRC_URL}  &&   unzip  *.zip                           && \
+    rm      *.zip       &&   mv     Asqa* src                       && \
+    cd      src         &&   mvn    clean install                   && \
+    cp -r   /root/.m2   /root/.m2_backup                            && \
+    rm -rf  /tmp/src    /root/.m2/*                                 && \
     rm -rf  /root/.m2_backup/repository/org/asqa*                   && \
     FIND='exec "$@"'                                                && \
     ADD='mv -f \/root\/.m2_backup\/repository \/root\/.m2\/;'       && \
