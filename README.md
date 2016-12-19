@@ -24,6 +24,12 @@ Supported tags and respective `Dockerfile` links :
 * jenkins_jdk7 ([Asqatasun-Jenkins-Plugin/jdk-7/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Asqatasun-Jenkins-Plugin/jdk-7/Dockerfile))
 * jenkins_jdk8 ([Asqatasun-Jenkins-Plugin/jdk-8/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Asqatasun-Jenkins-Plugin/jdk-8/Dockerfile))
 
+### Contrast-Finder
+* contrast.finder_jdk7.alpine ([Contrast-Finder/jdk-7/alpine/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Contrast-Finder/jdk-7/alpine/Dockerfile))
+* contrast.finder_jdk8.alpine ([Contrast-Finder/jdk-8/alpine/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Contrast-Finder/jdk-8/alpine/Dockerfile))
+* contrast.finder_jdk7 ([Contrast-Finder/jdk-7/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Contrast-Finder/jdk-7/Dockerfile))
+* contrast.finder_jdk8 ([Contrast-Finder/jdk-8/Dockerfile](https://github.com/Asqatasun/asqa.mvn/blob/master/Contrast-Finder/jdk-8/Dockerfile))
+
 
 ## How to use this image
 
