@@ -1,5 +1,11 @@
 
 --------------------------------
+Asqa.mvn 0.6.0, 2016-12-19
+--------------------------------
+- added Contrast-Finder/jdk-7/Dockerfile
+- added Contrast-Finder/jdk-8/Dockerfile
+
+--------------------------------
 Asqa.mvn 0.5.1, 2016-11-27
 --------------------------------
 - reduced weight for Asqatasun-Jenkins-Plugin
