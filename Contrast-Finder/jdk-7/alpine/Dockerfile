@@ -1,6 +1,4 @@
 FROM maven:3-jdk-7-alpine
-MAINTAINER Fabrice Gangler <fabrice@asqatasun.org>
-
 # ##########################################################
 #
 #                      DISCLAIMER

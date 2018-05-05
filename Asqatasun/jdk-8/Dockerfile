@@ -1,6 +1,4 @@
 FROM maven:3-jdk-8
-MAINTAINER Fabrice Gangler <fabrice@asqatasun.org>
-
 # ##########################################################
 #
 #                      DISCLAIMER
