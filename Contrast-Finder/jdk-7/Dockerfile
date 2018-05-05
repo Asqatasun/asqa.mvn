@@ -3,6 +3,12 @@ FROM maven:3-jdk-7
 #
 #                      DISCLAIMER
 #
+#   Contrast-Finder build need openjdk 8 (prerequisite jdeb).
+#   So the build of this DockerFile does not work.
+#       https://github.com/Asqatasun/Contrast-Finder/commit/a04096
+#       https://github.com/Asqatasun/Contrast-Finder/tree/develop/documentation/en/30_Contributor_doc/Build
+#
+#
 # #### usage ######################################################
 # 
 #   --- Building this docker image
@@ -32,7 +38,7 @@ FROM maven:3-jdk-7
 #   |-- openjdk:7-jdk                   https://github.com/docker-library/openjdk/blob/master/7-jdk/Dockerfile
 #     |-- buildpack-deps:jessie-scm     https://github.com/docker-library/buildpack-deps/blob/master/jessie/scm/Dockerfile
 #       |-- buildpack-deps:jessie-curl  https://github.com/docker-library/buildpack-deps/blob/master/jessie/curl/Dockerfile
-#         |-- debian:jessie             https://github.com/tianon/docker-brew-debian/blob/master/jessie/Dockerfile
+#         |-- debian:jessie             https://github.com/debuerreotype/docker-debian-artifacts/blob/dist-amd64/jessie/Dockerfile
 ###################################################################
 
 # build variables
@@ -48,7 +54,7 @@ RUN cd      /tmp/                                                   && \
     cd      src         &&   mvn    clean install                   && \
     cp -r   /root/.m2   /root/.m2_backup                            && \
     rm -rf  /tmp/src    /root/.m2/*                                 && \
-    rm -rf  /root/.m2_backup/repository/org/opens/contrast-finder   && \
+    rm -rfv /root/.m2_backup/repository/org/asqatasun               && \
     FIND='exec "$@"'                                                && \
     ADD='mv -f \/root\/.m2_backup\/repository \/root\/.m2\/;'       && \
     FILE=/usr/local/bin/mvn-entrypoint.sh                           && \   
@@ -66,6 +72,3 @@ RUN cd      /tmp/                                                   && \
 
 # environment variables
 ENV SRC_PRELOAD=${SRC_URL}
-
-
-

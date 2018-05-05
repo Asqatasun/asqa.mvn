@@ -30,9 +30,9 @@ FROM maven:3-jdk-8
 # #### FROM  ######################################################
 #   maven:3-jdk-8                       https://github.com/carlossg/docker-maven/blob/master/jdk-8/Dockerfile
 #   |-- openjdk:8-jdk                   https://github.com/docker-library/openjdk/blob/master/8-jdk/Dockerfile
-#     |-- buildpack-deps:jessie-scm     https://github.com/docker-library/buildpack-deps/blob/master/jessie/scm/Dockerfile
-#       |-- buildpack-deps:jessie-curl  https://github.com/docker-library/buildpack-deps/blob/master/jessie/curl/Dockerfile
-#         |-- debian:jessie             https://github.com/tianon/docker-brew-debian/blob/master/jessie/Dockerfile
+#     |-- buildpack-deps:stretch-scm    https://github.com/docker-library/buildpack-deps/blob/master/stretch/scm/Dockerfile
+#       |-- buildpack-deps:stretch-curl https://github.com/docker-library/buildpack-deps/blob/master/stretch/curl/Dockerfile
+#         |-- debian:stretch            https://github.com/debuerreotype/docker-debian-artifacts/blob/dist-amd64/stretch/Dockerfile
 ###################################################################
 
 # build variables
@@ -48,7 +48,7 @@ RUN cd      /tmp/                                                   && \
     cd      src         &&   mvn    clean install                   && \
     cp -r   /root/.m2   /root/.m2_backup                            && \
     rm -rf  /tmp/src    /root/.m2/*                                 && \
-    rm -rf  /root/.m2_backup/repository/org/opens/contrast-finder   && \
+    rm -rfv /root/.m2_backup/repository/org/asqatasun               && \
     FIND='exec "$@"'                                                && \
     ADD='mv -f \/root\/.m2_backup\/repository \/root\/.m2\/;'       && \
     FILE=/usr/local/bin/mvn-entrypoint.sh                           && \   
@@ -66,6 +66,3 @@ RUN cd      /tmp/                                                   && \
 
 # environment variables
 ENV SRC_PRELOAD=${SRC_URL}
-
-
-
