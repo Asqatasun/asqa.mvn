@@ -10,7 +10,7 @@ FROM maven:3-jdk-9
 #   docker build -t asqa.mvn:contrast.finder_jdk9  --build-arg GIT_BRANCH=develop  .
 #   docker build -t asqa.mvn:contrast.finder_jdk9  --build-arg GIT_BRANCH=v0.3.5   .
 #
-#   --- Compiling Asqatasun-Jenkins-Plugin with this docker image
+#   --- Compiling Contrast-Finder with this docker image
 #   docker run  -it --rm  -v "$PWD":/usr/src/  -w /usr/src/  asqa.mvn:contrast.finder_jdk9  mvn clean install
 #   docker run  -it --rm  -v "$PWD":/usr/src/  -w /usr/src/  asqa.mvn:contrast.finder_jdk9  mvn clean 
 #

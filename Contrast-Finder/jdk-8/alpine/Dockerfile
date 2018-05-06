@@ -10,7 +10,7 @@ FROM maven:3-jdk-8-alpine
 #   docker build -t asqa.mvn:contrast.finder_jdk8.alpine  --build-arg GIT_BRANCH=develop  .
 #   docker build -t asqa.mvn:contrast.finder_jdk8.alpine  --build-arg GIT_BRANCH=v1.3.1   .
 #
-#   --- Compiling Asqatasun-Jenkins-Plugin with this docker image
+#   --- Compiling Contrast-Finder with this docker image
 #   docker run  -it --rm  -v "$PWD":/usr/src/  -w /usr/src/  asqa.mvn:contrast.finder_jdk8.alpine  mvn clean install
 #   docker run  -it --rm  -v "$PWD":/usr/src/  -w /usr/src/  asqa.mvn:contrast.finder_jdk8.alpine  mvn clean 
 #
